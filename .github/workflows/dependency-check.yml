@@ -45,11 +45,17 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: reports/filtered-trivy-report.json
-
+          
       - name: Save Trivy JSON Report as Artifact
         uses: actions/upload-artifact@v4
         with:
           name: trivy-json-report
+          path: reports/filtered-trivy-report.json
+          
+      - name: Save Filtered Trivy JSON Report as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: trivy-json-report-filtered
           path: reports/filtered-trivy-report.json
 
   semgrep-scan:
