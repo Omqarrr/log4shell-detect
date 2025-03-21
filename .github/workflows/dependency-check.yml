@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: trivy-json-report
-          path: reports/filtered-trivy-report.json
+          path: reports/trivy-report.json
           
       - name: Save Filtered Trivy JSON Report as Artifact
         uses: actions/upload-artifact@v4
