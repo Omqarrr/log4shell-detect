@@ -17,7 +17,7 @@ def filter_json(input_file_path, pom_file_path):
             pom_base64 = base64.b64encode(pom_file.read()).decode('utf-8')
 
         filtered_data = {
-            "scanId": scan_id,
+            "scanId": scan_id[0:7],
             "projectName": project_name,
             "repo_url": repo_url,
             "pom.xml": pom_base64, 
