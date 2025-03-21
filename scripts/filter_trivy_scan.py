@@ -37,8 +37,10 @@ def filter_json(input_file_path, pom_file_path):
                     "VulnerabilityID": vuln.get("VulnerabilityID"),
                     "PkgID": vuln.get("PkgID"),
                     "PkgName": vuln.get("PkgName"),
-                    "Remediation": f"This vulnerability in {vuln.get('PkgID')} is fixed in {vuln.get('FixedVersion')}",
-                    "Category": category,  
+                    "Remediation": [
+                        f"This vulnerability in {vuln.get('PkgID')} is fixed in {vuln.get('FixedVersion')}"
+                    ],   
+                    "Category": category,
                     "Title": title,
                     "Description": vuln.get("Description"),
                     "Severity": vuln.get("Severity"),
