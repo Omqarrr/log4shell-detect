@@ -17,6 +17,10 @@ jobs:
   trivy-scan:
     runs-on: ubuntu-latest
     steps:
+      - name: chekc GITHUB_TOKEN env
+        run : |
+          echo $GITHUB_TOKEN
+          
       - name: Checkout Code
         uses: actions/checkout@v4
 
